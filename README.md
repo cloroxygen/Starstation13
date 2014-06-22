@@ -1,17 +1,14 @@
 # baystation12
 
-[Website](http://ss13.undo.it) - [Code](http://github.com/d3athrow/vgstation13/) - [IRC](irc://irc.rizon.net/vgstation) (irc.rizon.net #vgstation)
+[Website](http://ss13.undo.it) - [Code](http://github.com/cloroxygen/starstation13/) - [IRC](irc.rizon.net #starstation13)
 
 ---
 
 ### GETTING THE CODE
-The simplest way to obtain the code is using the github .zip feature.
 
-Click [here](https://github.com/d3athrow/vgstation13/archive/master.zip) to get the latest stable code as a .zip file, then unzip it to wherever you want.
+Use git.  You'll need to download git or some client from [here](http://git-scm.com/).  When that's installed, right click in any folder and click on "Git Bash".  When that opens, type in:
 
-The more complicated and easier to update method is using git.  You'll need to download git or some client from [here](http://git-scm.com/).  When that's installed, right click in any folder and click on "Git Bash".  When that opens, type in:
-
-    git clone https://github.com/d3athrow/vgstation13.git
+    git clone https://github.com/cloroxygen/starstation13.git
 
 (hint: hold down ctrl and press insert to paste into git bash)
 
@@ -21,8 +18,7 @@ This will take a while to download, but it provides an easier method for updatin
 
 Keep in mind that we have multiple branches for various purposes.
 
-* *master* - "stable" code, used on the main server.
-* *Bleeding-Edge* - The latest unstable code.  _Please do any development against this branch!_
+* *master* - Main / Only branch atm
 
 ### INSTALLATION
 
@@ -32,9 +28,9 @@ This is a sourcecode-only release, so the next step is to compile the server fil
 
     saving baystation12.dmb (DEBUG mode)
     
-    baystation12.dmb - 0 errors, 0 warnings
+    baystation12.dmb - 0 errors, 13 warnings
 
-If you see any errors or warnings, something has gone wrong - possibly a corrupt download or the files extracted wrong, or a code issue on the main repo.  Ask on IRC.
+If you see any errors something has gone wrong - possibly a corrupt download or the files extracted wrong, or a code issue on the main repo.  Ask on IRC.
 
 Next, copy everything from config-example/ to config/ so you have some default configuration.
 
