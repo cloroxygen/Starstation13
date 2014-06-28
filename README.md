@@ -1,6 +1,6 @@
-# baystation12
+# Star Station 13
 
-Server: 162.244.30.245:7777 - [Code](http://github.com/cloroxygen/starstation13/) - IRC: irc.rizon.net #starstation13
+Server: ss13.spacemonkey.org:9999 - [Code](http://github.com/cloroxygen/starstation13/) - IRC: irc.rizon.net #starstation13
 
 ---
 
