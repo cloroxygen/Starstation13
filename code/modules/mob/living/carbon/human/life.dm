@@ -58,6 +58,7 @@ var/global/list/brutefireloss_overlays = list("1" = image("icon" = 'icons/mob/sc
 	var/exposedtimenow = 0
 	var/cancerwait = 3000
 	var/firstexposed = 0
+	var/laglesscycle = 0
 // Doing this during species init breaks shit.
 /mob/living/carbon/human/proc/DeferredSpeciesSetup()
 	var/mut_update=0
@@ -1495,11 +1496,13 @@ var/global/list/brutefireloss_overlays = list("1" = image("icon" = 'icons/mob/sc
 
 	proc/handle_random_events()
 		// Puke if toxloss is too high
+		laglesscycle += 1
 		if(!stat)
 			if (getToxLoss() >= 45 && nutrition > 20)
 				vomit()
-		if((air_master.current_cycle % 3) == 0)
-
+		//if((air_master.current_cycle % 3) == 0)
+		if(laglesscycle >= 20)
+			laglesscycle = 0
 			if (getToxLoss() >= (cancerfactor * 10))
 				if(firstexposed == 0)
 					firstexposed = world.timeofday
