@@ -420,19 +420,6 @@ datum
 				..()
 				return
 
-		cortolin
-			name = "Cortolin"
-			id = "cortolin"
-			description = "A powerful cardio-stimulant."
-			reagent_state = LIQUID
-			color = "#6666FF" // rgb:idk
-			overdose = 6
-			on_mob_life(var/mob/living/M as mob)
-				if(!M) M = holder.my_atom
-				if(M.health <= 80)
-					M.health += rand(10,20)
-				..()
-				return
 
 		toxin
 			name = "Toxin"
@@ -1645,12 +1632,33 @@ datum
 				..()
 				return
 
+
 		tricordrazine
 			name = "Tricordrazine"
 			id = "tricordrazine"
-			description = "Tricordrazine is a highly potent stimulant, originally derived from cordrazine. Can be used to treat a wide range of injuries."
+			description = "Tricordrazine is a highly potent stimulant, originally derived from cordrazine. Can be used to revive a critical patient. Highly toxic."
 			reagent_state = LIQUID
 			color = "#C8A5DC" // rgb: 200, 165, 220
+			overdose = 5
+			on_mob_life(var/mob/living/M as mob)
+				if(M.stat == 1.0)
+					M.stat = 0
+				if(!M) M = holder.my_atom
+				if(M.getOxyLoss() && prob(95)) M.adjustOxyLoss(-3*REM)
+				if(M.getBruteLoss() && prob(95)) M.heal_organ_damage(3*REM,0)
+				if(M.getFireLoss() && prob(95)) M.heal_organ_damage(0,3*REM)
+				if(M.getToxLoss() && prob(95)) M.adjustToxLoss(-3*REM)
+				..()
+				return
+
+
+		cordrazine
+			name = "Cordrazine"
+			id = "cordrazine"
+			description = "Cordrazine is a potent stimulant, it can be used to turn around a critical patient."
+			reagent_state = LIQUID
+			color = "#FF9999" // rgb: idk
+			overdose = 30
 
 			on_mob_life(var/mob/living/M as mob)
 				if(M.stat == 2.0)

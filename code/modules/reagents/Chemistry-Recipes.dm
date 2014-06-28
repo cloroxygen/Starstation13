@@ -102,11 +102,11 @@ datum
 			result_amount = 3
 
 
-		cortolin
-			name = "Cortolin"
-			id = "cortolin"
-			result = "cortolin"
-			required_reagents = list("inaprovaline" = 1, "tricordrazine" = 1)
+		tricordrazine
+			name = "Tricordrazine"
+			id = "tricordrazine"
+			result = "tricordrazine"
+			required_reagents = list("inaprovaline" = 1, "cordrazine" = 1)
 			required_catalysts = list("uranium" = 5)
 			result_amount = 1
 
@@ -267,10 +267,10 @@ datum
 			required_reagents = list("potassium" = 1, "oxygen" = 1, "sugar" = 1)
 			result_amount = 3
 
-		tricordrazine
-			name = "Tricordrazine"
-			id = "tricordrazine"
-			result = "tricordrazine"
+		cordrazine
+			name = "Cordrazine"
+			id = "cordrazine"
+			result = "cordrazine"
 			required_reagents = list("inaprovaline" = 1, "anti_toxin" = 1)
 			result_amount = 2
 
