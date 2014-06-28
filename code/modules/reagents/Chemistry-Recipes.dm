@@ -106,7 +106,8 @@ datum
 			name = "Cortolin"
 			id = "cortolin"
 			result = "cortolin"
-			required_reagents = list("inaprovaline" = 1, "tricordrazine" = 1, "plasma" = 1)
+			required_reagents = list("inaprovaline" = 1, "tricordrazine" = 1)
+			required_catalysts = list("uranium" = 5)
 			result_amount = 1
 
 

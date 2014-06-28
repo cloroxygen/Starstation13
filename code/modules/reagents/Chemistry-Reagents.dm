@@ -429,8 +429,8 @@ datum
 			overdose = 6
 			on_mob_life(var/mob/living/M as mob)
 				if(!M) M = holder.my_atom
-				if(M.health <= 160)
-					M.health += rand(5,10)
+				if(M.health <= 80)
+					M.health += rand(10,20)
 				..()
 				return
 
