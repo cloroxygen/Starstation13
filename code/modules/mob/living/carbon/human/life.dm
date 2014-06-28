@@ -1501,7 +1501,7 @@ var/global/list/brutefireloss_overlays = list("1" = image("icon" = 'icons/mob/sc
 			if (getToxLoss() >= 45 && nutrition > 20)
 				vomit()
 		//if((air_master.current_cycle % 3) == 0)
-		if(laglesscycle >= 20)
+		if(laglesscycle >= 5)
 			laglesscycle = 0
 			if (getToxLoss() >= (cancerfactor * 10))
 				if(firstexposed == 0)
